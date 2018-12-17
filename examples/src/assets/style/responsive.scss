@@ -1,0 +1,14 @@
+$xs: 575px;
+$s: 576px;
+$m: 768px;
+$l: 992px;
+$xl: 1200px;
+
+@mixin respond-to($size){
+  @if($size == $xs){
+    @media all and(max-width: $size) {@content}
+  }
+  @else {
+    @media all and(min-width: $size) {@content}
+  }
+}

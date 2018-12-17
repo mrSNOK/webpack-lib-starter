@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
+
+@import "./responsive.scss";
+@import "./fonts.scss";
+@import "./colors.scss";
+@import "../../components/test/style/style.scss";
+
+
+$lg-vertical-spacing:5rem;
+$sm-vertical-spacing:2.14rem;
+
+html {
+  box-sizing: border-box;
+}
+body{
+  background: #f0f0f0;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.lg-top-spacer{
+  margin-top: $lg-vertical-spacing;
+}
+.lg-bottom-spacer{
+  margin-bottom: $lg-vertical-spacing;
+}
+.sm-top-spacer{
+  margin-top: $sm-vertical-spacing;
+}
+.sm-bottom-spacer{
+  margin-bottom: $sm-vertical-spacing;
+}
+h1,h2,p,ul{
+  margin: 0;
+}
+br{
+  display: none;
+  @include media-breakpoint-up(md){
+    display: inline;
+  }
+}
+h1 br, h2 br{
+  display: inline;
+}
+.margin-fix:before, .margin-fix:after{
+  display:block;
+  content: '.';
+  line-height:0;
+  height:0;
+  visibility: hidden;
+}
+*:focus{
+  outline: none;
+}
